@@ -1,0 +1,28 @@
+.paragraph {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
+    
+
+    & textarea {
+        flex: 1;
+
+        min-inline-size: 15rem;
+        block-size: 10rem;
+
+        padding: .5rem;
+
+        resize: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .paragraph {
+        & textarea {
+            min-inline-size: 15rem;
+    
+            resize: none;
+        }
+    }
+}
