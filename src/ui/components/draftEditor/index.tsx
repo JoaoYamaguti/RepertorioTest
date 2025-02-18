@@ -11,7 +11,7 @@ export default function DraftEditor() {
     const [paragraph, setParagraph] = useState("")
 
     const paragraphIndex = useRef(0)
-    const textareaTag = useRef(null)
+    const textareaTag = useRef<HTMLTextAreaElement>(null)
 
     function updateParagraph(newParagraph: string, index: number) {
         const newDraft = [...draft]
