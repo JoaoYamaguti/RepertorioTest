@@ -60,9 +60,15 @@ export default function DraftEditor() {
     function deleteParagraphContent(index: number) {
         const newDraft = [...draft]
 
-        newDraft[index] = " "
+        newDraft[index] = ""
 
         setDraft(newDraft)
+
+        setParagraph(newDraft[paragraphIndex.current])
+        
+        if (textareaTag.current != null) {
+            textareaTag.current.focus()
+        }
     }
 
     return (
